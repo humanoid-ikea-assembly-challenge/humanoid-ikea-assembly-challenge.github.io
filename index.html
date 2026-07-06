@@ -67,7 +67,7 @@
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "url": "https://forms.gle/QBJEDzoBfxoNqwS19",
+    "url": "https://forms.gle/PmMfKCPyZ8kC5TQTA",
     "validFrom": "2026-04-01"
   },
   "isAccessibleForFree": true,
@@ -208,6 +208,13 @@ h1.hero-title .yellow-mark {
   text-decoration: none;
 }
 .btn-primary:hover { background: var(--blue-deep); color: #fff; }
+.btn-primary.btn-disabled,
+.btn-primary:disabled {
+  background: var(--paper-2); color: var(--ink-3);
+  cursor: not-allowed; pointer-events: none;
+}
+.btn-primary.btn-disabled:hover,
+.btn-primary:disabled:hover { background: var(--paper-2); color: var(--ink-3); }
 .btn-ghost {
   display: inline-flex; align-items: center; justify-content: center;
   background: transparent; color: var(--ink);
@@ -711,6 +718,19 @@ h2.section-title .yellow-mark {
   background: var(--ink-4); border-radius: 50%;
   margin-right: 8px;
 }
+.res-card .btn-access {
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-top: auto;
+  padding: 12px 22px;
+  background: var(--blue); color: #fff;
+  font-size: 12px; font-weight: 700;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  align-self: flex-start;
+  text-decoration: none; transition: background .15s;
+}
+.res-card .btn-access:hover { background: var(--blue-deep); }
 
 /* ============ §04 — TEAM ============ */
 .team {
@@ -1030,9 +1050,9 @@ body.lightbox-open { overflow: hidden; }
       <li><a href="#team">Organizers</a></li>
       <li><a href="#partners">Partners</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a class="nav-cta" href="https://forms.gle/QBJEDzoBfxoNqwS19" target="_blank" rel="noopener">Register</a></li>
+      <li><a class="nav-cta" href="https://forms.gle/PmMfKCPyZ8kC5TQTA" target="_blank" rel="noopener">Register interest</a></li>
     </ul>
-    <a class="nav-cta nav-cta-mobile" href="https://forms.gle/QBJEDzoBfxoNqwS19" target="_blank" rel="noopener">Register</a>
+    <a class="nav-cta nav-cta-mobile" href="https://forms.gle/PmMfKCPyZ8kC5TQTA" target="_blank" rel="noopener">Register interest</a>
   </div>
 </nav>
 
@@ -1047,8 +1067,8 @@ body.lightbox-open { overflow: hidden; }
         on its own?
       </h1>
       <div class="hero-cta-row">
-        <a href="https://forms.gle/QBJEDzoBfxoNqwS19" target="_blank" rel="noopener" class="btn-primary">Register your team →</a>
-        <a href="#rules" class="btn-ghost">See the rules</a>
+        <button type="button" class="btn-primary btn-disabled" disabled aria-disabled="true">IROS26 Registrations closed</button>
+        <a href="https://forms.gle/PmMfKCPyZ8kC5TQTA" target="_blank" rel="noopener" class="btn-ghost">Register interest for next edition →</a>
       </div>
       <div class="hero-meta-row">
         <div class="hero-meta-item"><div class="k">Platform</div><div class="v">Unitree G1</div></div>
@@ -1243,7 +1263,7 @@ body.lightbox-open { overflow: hidden; }
             <li>500+ episodes</li>
             <li>Released ahead of the event</li>
           </ul>
-          <button type="button" class="btn-soon" disabled aria-disabled="true">Coming soon</button>
+          <a href="https://forms.gle/PmMfKCPyZ8kC5TQTA" target="_blank" rel="noopener" class="btn-access">Get access</a>
         </div>
       </article>
 
@@ -1392,15 +1412,15 @@ body.lightbox-open { overflow: hidden; }
 
     <div class="register-card">
       <div>
-        <div class="badge-soon">Registration opens soon</div>
+        <div class="badge-soon">IROS26 Registrations closed</div>
         <h3>
-          Complete the form and we'll notify you when
-          <em>everything goes live</em> — sim, dataset, remote labs, registration.
+          Registration for this edition is <em>now closed.</em>
+          Register your interest and we'll notify you when the next edition opens.
         </h3>
         <p>
-          Tell us about your team. We'll be in touch with simulation access, the dataset link, and the call-for-teams when it opens.
+          Tell us about your team. We'll be in touch with simulation access, the dataset link, and the call-for-teams for the next edition.
         </p>
-        <a href="https://forms.gle/QBJEDzoBfxoNqwS19" target="_blank" rel="noopener" class="btn-primary register-cta">Open the form →</a>
+        <a href="https://forms.gle/PmMfKCPyZ8kC5TQTA" target="_blank" rel="noopener" class="btn-primary register-cta">Register interest for next edition →</a>
       </div>
       <div class="contact-list">
         <div class="contact-row"><span class="k">Edition</span><span class="v">Inaugural · 2026</span></div>
@@ -1433,7 +1453,7 @@ body.lightbox-open { overflow: hidden; }
     <div class="footer-col">
       <h5>Get involved</h5>
       <ul>
-        <li><a href="#register">Register</a></li>
+        <li><a href="#register">Register interest</a></li>
         <li><a href="#team">Organizers</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="mailto:organizers@example.org">Contact</a></li>
